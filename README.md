@@ -103,5 +103,4 @@ The frontend will be available at `http://localhost:5500`.
 - **Database**: PostgreSQL
 - **Tools**: Alembic for migrations, dotenv for environment variables
 
-## License
-This project is licensed under the MIT License.
+
