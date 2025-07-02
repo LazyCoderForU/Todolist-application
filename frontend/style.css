@@ -1,0 +1,145 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.container {
+  max-width: 520px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 2.5em 2em 2em 2em;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.18);
+  position: relative;
+}
+h1 {
+  text-align: center;
+  color: #3a7bd5;
+  margin-bottom: 1.5em;
+  letter-spacing: 2px;
+}
+form {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+form input, form select {
+  flex: 1 1 180px;
+  min-width: 120px;
+  padding: 0.7em 1em;
+  font-size: 1em;
+  border: 1px solid #b2bec3;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s;
+}
+form input:focus, form select:focus {
+  border: 1.5px solid #3a7bd5;
+}
+form button {
+  flex: 0 0 auto;
+  height: 48px;
+  margin-left: 0.5em;
+  padding: 0 1.5em;
+  font-size: 1.05em;
+  background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(58, 123, 213, 0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form button:hover {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+  box-shadow: 0 4px 16px rgba(58, 123, 213, 0.15);
+  transform: translateY(-2px) scale(1.04);
+}
+@media (max-width: 700px) {
+  .container {
+    max-width: 98vw;
+    padding: 1.2em 0.5em 1.5em 0.5em;
+  }
+  form {
+    flex-direction: column;
+    gap: 0.7em;
+    align-items: stretch;
+  }
+  form button {
+    width: 100%;
+    margin-left: 0;
+    height: 44px;
+  }
+}
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1.5em;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f8fafc;
+  margin-bottom: 1.1em;
+  padding: 1.1em 1.3em;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(58, 123, 213, 0.08);
+  transition: box-shadow 0.2s;
+  border-left: 6px solid #3a7bd5;
+}
+.task.done {
+  text-decoration: line-through;
+  color: #b2bec3;
+  background: #e0f7fa;
+  border-left: 6px solid #00b894;
+}
+.task .actions button {
+  margin-left: 0.5em;
+  background: #fff;
+  border: 1px solid #3a7bd5;
+  color: #3a7bd5;
+  border-radius: 4px;
+  padding: 0.4em 0.9em;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.task .actions button:hover {
+  background: #3a7bd5;
+  color: #fff;
+}
+.task .actions button:last-child {
+  border: 1px solid #e17055;
+  color: #e17055;
+}
+.task .actions button:last-child:hover {
+  background: #e17055;
+  color: #fff;
+}
+.task span strong {
+  color: #222f3e;
+  font-size: 1.08em;
+}
+.task span em {
+  font-size: 0.95em;
+  color: #636e72;
+  margin-left: 0.7em;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e3eafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #b2bec3;
+  border-radius: 8px;
+}
